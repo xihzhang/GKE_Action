@@ -1,0 +1,5 @@
+deployment:
+  type: gateway
+
+gateway:
+  turnExternalUriBlue: 127.0.0.1
