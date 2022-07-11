@@ -225,18 +225,18 @@ internal_ingress:
         - gauth-int.${DOMAIN}
       #secretName: letsencrypt
 
-monitoring:
+#monitoring:
   # Deploy ServiceMonitor
-  enabled: true
+  #enabled: true
   # Metrics Scraping Interval
-  interval: 15s
+  #interval: 15s
   # Create ConfigMap with Grafana Dashboards
-  dashboards: true
+  #dashboards: true
   # Create PrometheusRule k8s object with alarm definitions
-  alarms: false
+  #alarms: false
   # Create rules with CRITICAL severity for Pager Duty integration.
   # `false` will change severity to HIGH (email notifications)
-  pagerduty: true
+  #pagerduty: true
 
 services:
   auth:
