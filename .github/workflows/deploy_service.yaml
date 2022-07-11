@@ -52,7 +52,7 @@ on:
         type: choice
         description: service(s) for deployment
         required: true
-        default: webrtc
+        default: gauth
         options:
         - infra
         - gauth
@@ -83,11 +83,11 @@ on:
       namespace:
         description: namespace (if not default)
         required: false
-        default: "webrtc-test"
+        default: "gauth"
       helmrepo:
         description: helm repo name in HELM_REGISTRY
         required: true
-        default: helm-stage
+        default: helm-multicloud
       command:
         description: command install|validate|uninstall
         required: true
