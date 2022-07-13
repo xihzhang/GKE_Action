@@ -33,11 +33,11 @@ redis:
     create: true
   image: redis:5-stretch
   #cluster_nodes: infra-redis-redis-cluster-headless.infra.svc.cluster.local:6379
-  cluster_nodes: redis-redis-cluster.redis.svc.cluster.local:6379
+  cluster_nodes: redis-redis-cluster-headless.redis.svc.cluster.local:6379
   use_tls: false
   # REDIS AUTH
   password_required: true
-  password: R3wjA5Pc13
+  password: gauth_redis_password
 
 services:
   secrets:
