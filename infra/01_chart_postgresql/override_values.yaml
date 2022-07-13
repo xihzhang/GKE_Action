@@ -41,7 +41,7 @@ shmVolume:
   chmod:
     enabled: false
 
-metrics:
-  enabled: true #Start a prometheus exporter
-  serviceMonitor:
-    enabled: false
+#metrics:
+  #enabled: true #Start a prometheus exporter
+  #serviceMonitor:
+    #enabled: true
