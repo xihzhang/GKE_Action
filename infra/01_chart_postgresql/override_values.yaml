@@ -5,7 +5,7 @@
 ###############################################################################
 
 global:
-  storageClass: nfs-client
+  storageClass: standard
   
   postgresql:
     auth:
