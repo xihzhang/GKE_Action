@@ -83,7 +83,7 @@ on:
       namespace:
         description: namespace (if not default)
         required: false
-        default: "gauth"
+        default: "default"
       helmrepo:
         description: helm repo name in HELM_REGISTRY
         required: true
