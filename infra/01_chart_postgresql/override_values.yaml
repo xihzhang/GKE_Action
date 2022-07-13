@@ -44,4 +44,4 @@ shmVolume:
 metrics:
   enabled: true #Start a prometheus exporter
   serviceMonitor:
-    enabled: true
+    enabled: false
