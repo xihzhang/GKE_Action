@@ -52,7 +52,7 @@ on:
         type: choice
         description: service(s) for deployment
         required: true
-        default: gauth
+        default: infra
         options:
         - infra
         - gauth
