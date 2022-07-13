@@ -50,7 +50,7 @@ services:
       consul_token: keyvault-consul-consul-gauth-token
   # Number of pod replicas, recommended to be N+1
   replicas: 2
-  location: /us-west2
+  location: /USW1
   db:
     init: true
     poolSize: 3
