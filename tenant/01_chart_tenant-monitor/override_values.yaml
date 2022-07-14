@@ -3,11 +3,11 @@ global:
   imageRegistry: $IMAGE_REGISTRY
   pullPolicy: Always
 
-prometheus:
-  podMonitor:
-    create: "true"
-  alertrule:
-    create: "false"
+#prometheus:
+  #podMonitor:
+    #create: "true"
+  #alertrule:
+    #create: "false"
 
 fluent:
   rawlogs:
