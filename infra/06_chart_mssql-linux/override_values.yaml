@@ -16,7 +16,7 @@ persistence:
   # existingTransactionLogClaim:
   # existingBackupClaim:
   # existingMasterClaim:
-  storageClass: csi-standard-rwx
+  # storageClass:
   dataAccessMode: ReadWriteOnce
   dataSize: 1Gi
   logAccessMode: ReadWriteOnce
