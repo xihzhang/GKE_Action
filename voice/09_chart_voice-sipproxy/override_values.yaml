@@ -29,3 +29,12 @@ secrets:
 # Enable HPA and set the target CPU and memory for scale up and down
 hpa:
   enabled: false
+  
+
+prometheus:
+    operator:
+      enabled: false
+
+prometheus:
+    podMonitor:
+      enabled: false
