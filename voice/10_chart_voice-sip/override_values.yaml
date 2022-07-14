@@ -62,3 +62,12 @@ hpa:
   targetMemoryPercent: 60
   enabled: true
   scaledownDisabled: true
+  
+
+prometheus:
+    operator:
+      enabled: false
+
+prometheus:
+    podMonitor:
+      enabled: false
