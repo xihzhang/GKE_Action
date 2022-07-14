@@ -30,7 +30,9 @@ hpa:
   enabled: true  
 
 prometheus:
-  operator:
-    enabled: false
+    operator:
+      enabled: false
 
-prometheus.operator.enabled=false
+prometheus:
+    podMonitor:
+      enabled: false
