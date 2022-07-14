@@ -37,3 +37,7 @@ hpa:
 prometheus:
     operator:
       enabled: false
+      
+prometheus:
+    podMonitor:
+      enabled: false
