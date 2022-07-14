@@ -28,6 +28,9 @@ hpa:
   targetCPUPercent: 60
   targetMemoryPercent: 60
   enabled: true  
-  
-podMonitor:
-  enabled: false
+
+prometheus:
+  operator:
+    enabled: false
+
+prometheus.operator.enabled=false
