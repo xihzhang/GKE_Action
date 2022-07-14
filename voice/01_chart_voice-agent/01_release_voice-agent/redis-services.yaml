@@ -21,3 +21,4 @@ subsets:
         name: redisport
         protocol: TCP
         #port: ${REDIS_PORT}
+        #kube expects interge but secret api gives string.   must change hardcode here.
