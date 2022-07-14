@@ -17,6 +17,7 @@ subsets:
   - addresses:
       - ip: ${REDIS_IP}
     ports:
-      - port: ${REDIS_PORT}
+      - port: 6379
         name: redisport
         protocol: TCP
+        #port: ${REDIS_PORT}
