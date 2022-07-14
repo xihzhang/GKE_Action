@@ -179,3 +179,12 @@ securityContext:
     #scrapeTimeout:
 
 podSecurityContext: {}
+
+
+prometheus:
+    operator:
+      enabled: false
+
+prometheus:
+    podMonitor:
+      enabled: false
