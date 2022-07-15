@@ -9,7 +9,7 @@ spec:
   resources:
     requests:
       storage: 3Gi
-  storageClassName: standard
+  storageClassName: csi-standard-rwx
 EOF
 
 
