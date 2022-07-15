@@ -38,7 +38,7 @@ raa:
       # line below not works accroding to GCXI-5147
       # use --set raa.volumes.config.pv=false helm option
       pv: {}
-      storageClassName: nfs-client
+      storageClassName: standard
       pvc:
         name: "gcxi-raa-config-pvc"
         volumeName: ""
@@ -46,7 +46,7 @@ raa:
       # line below not works accroding to GCXI-5147
       # use --set raa.volumes.health.pv=false helm option
       pv: {}
-      storageClassName: nfs-client
+      storageClassName: standard
       pvc:
         name: "gcxi-raa-health-pvc"
         volumeName: ""
