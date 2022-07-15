@@ -10,9 +10,9 @@ designer:
       create: true 
       mountPath: /designer/logs     
       claimSize: "5Gi"
-      storageClass: "nfs-client"
+      storageClass: "standard"
     workspacePvc: # Workspace
       create: true
       mountPath: /designer/workspace      
       claimSize: "5Gi"
-      storageClass: "nfs-client"
+      storageClass: "standard"
