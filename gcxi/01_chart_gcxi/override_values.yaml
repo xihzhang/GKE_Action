@@ -79,13 +79,13 @@ gcxi:
   pvc:
     backup:
       capacity: 1Gi
-      storageClassName: nfs-client
+      storageClassName: standard
     log:
       capacity: 1Gi
-      storageClassName: nfs-client
+      storageClassName: standard
     postgres:
       capacity: 1Gi
-      storageClassName: nfs-client
+      storageClassName: standard
     share:
       capacity: 1Gi
-      storageClassName: nfs-client
+      storageClassName: standard
