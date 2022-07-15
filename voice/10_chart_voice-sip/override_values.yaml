@@ -36,14 +36,14 @@ volumes:
   pvcLog:
     create: true
     claim: sip-log-pvc
-    storageClass: standard
-    accessMode: ReadWriteOnce
+    storageClass: csi-standard-rwx
+    storageProvisioner: filestore.csi.storage.gke.io
     volumeName:
   pvcJsonLog:
     create: true
     claim: sip-json-log-pvc
-    storageClass: standard
-    accessMode: ReadWriteOnce
+    storageClass: csi-standard-rwx
+    storageProvisioner: filestore.csi.storage.gke.io
     volumeName:
   log:
     mountPath:
