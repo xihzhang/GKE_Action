@@ -42,14 +42,14 @@ volumes:
     create: true
     claim: sip-log-pvc
     storageClass: standard
-    accessModes:  ReadWriteMany
+    accessModes: "ReadWriteOnce"
     volumeName:
 
   pvcJsonLog:
     create: true
     claim: sip-json-log-pvc
     storageClass: standard
-    accessModes:  ReadWriteMany
+    accessModes: "ReadWriteOnce"
     volumeName:
 
   log:
