@@ -36,12 +36,14 @@ volumes:
   pvcLog:
     create: true
     claim: sip-log-pvc
-    storageClass: nfs-client
+    storageClass: standard
+    accessMode: ReadWriteOnce
     volumeName:
   pvcJsonLog:
     create: true
     claim: sip-json-log-pvc
-    storageClass: nfs-client
+    storageClass: standard
+    accessMode: ReadWriteOnce
     volumeName:
   log:
     mountPath:
