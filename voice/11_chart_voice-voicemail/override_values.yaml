@@ -34,7 +34,7 @@ volumes:
     claim: voice-voicemail-pvc
     # Check the sizing guide and evaluate the size available in the above document
     claimSize: 3Gi                  #disregard, we create PVC manually
-    storageClass: standard          #disregard, we create PVC manually
+    storageClass: voice-voicemail   #disregard, we create PVC manually
 
 ## Voicemail is accessed by GVP, GWS, WWE and AgentSetup with the below service
 service:
