@@ -41,13 +41,15 @@ volumes:
   pvcLog:
     create: true
     claim: sip-log-pvc
-    storageClass: csi-standard-rwx
+    storageClass: standard
+    Access Modes: RWO
     volumeName:
 
   pvcJsonLog:
     create: true
     claim: sip-json-log-pvc
-    storageClass: csi-standard-rwx
+    storageClass: standard
+    Access Modes: RWO
     volumeName:
 
   log:
