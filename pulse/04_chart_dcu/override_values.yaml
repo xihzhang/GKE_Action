@@ -27,7 +27,7 @@ log:
     accessModes:
       - ReadWriteMany
     capacity: 10Gi
-    class: nfs-client
+    class: standard
 
 # * Config info
 # Set your values.
