@@ -47,7 +47,7 @@ volumes:
   pvcJsonLog:
     create: true
     claim: sip-json-log-pvc
-    storageClass: nfs-client
+    storageClass: standard
     volumeName:
 
   log:
