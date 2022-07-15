@@ -2,19 +2,16 @@
 deployment:
   namespace: ${NS}
   replicaCount: 1
-
 # override the registry from where the image will be deployed
 image:
   registry: $IMAGE_REGISTRY
   pullPolicy: Always
   imagePullSecrets: "pullsecret"
-
 loggingSidecar:
   enabled: true
   image:
     registry: fluent
     repository: fluent-bit
-
 sipsLoggingSidecar:
   enabled: true
   image:
@@ -27,7 +24,6 @@ context:
     redis:
       port: 6379
     dnsServer: 127.0.0.1
-
 # Set the consul volume to be mounted
 secrets:
   consulACL:
@@ -35,36 +31,30 @@ secrets:
     - name: consul-shared-secret
       secret:
         secretName: consul-voice-token
-
 # pvc will be created for logs
 volumes:
   pvcLog:
     create: true
     claim: sip-log-pvc
-    storageClass: standard
-    accessModes: "ReadWriteOnce"
+    storageClass: nfs-client
     volumeName:
-
   pvcJsonLog:
     create: true
     claim: sip-json-log-pvc
-    storageClass: standard
-    accessModes: "ReadWriteOnce"
+    storageClass: nfs-client
     volumeName:
-
   log:
     mountPath:
-
   jsonLog:
     mountPath:
-
 # Enable HPA and set the target CPU and memory for scale up and down
 hpa:
   targetCPUPercent: 60
   targetMemoryPercent: 60
   enabled: true
+  scaledownDisabled: true 
   scaledownDisabled: true
-  
+
 
 prometheus:
     operator:
