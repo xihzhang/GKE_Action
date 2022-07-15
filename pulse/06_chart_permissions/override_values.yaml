@@ -78,7 +78,7 @@ log:
     accessModes:
       - ReadWriteMany
     capacity: 10Gi
-    class: nfs-client
+    class: standard
 
 ## Specifies the security context for all Pods in the service
 ##
