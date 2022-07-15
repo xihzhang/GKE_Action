@@ -19,7 +19,7 @@ global:
       # The key of the Kubernetes secret.
       secretKey: tls.key
   acls:
-    manageSystemACLs: true
+    manageSystemACLs: false
 client:
   enabled: true
 connectInject:
