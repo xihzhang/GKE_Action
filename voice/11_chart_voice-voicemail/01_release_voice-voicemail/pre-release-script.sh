@@ -5,11 +5,11 @@ metadata:
   name: voice-voicemail-pvc
 spec:
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   resources:
     requests:
       storage: 3Gi
-  storageClassName: csi-standard-rwx
+  storageClassName: Access Modes: RWO
 EOF
 
 
