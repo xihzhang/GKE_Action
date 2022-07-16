@@ -1,4 +1,12 @@
 # no of instances to be created during starup default is 1
+global:
+  storageClass: csi-standard-rwx
+  
+primary:
+  persistence: 
+    storageClass: csi-standard-rwx
+
+
 deployment:
   namespace: ${NS}
   replicaCount: 1
