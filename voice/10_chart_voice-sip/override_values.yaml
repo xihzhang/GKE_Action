@@ -39,22 +39,23 @@ secrets:
 # pvc will be created for logs
 volumes:
   pvcLog:
-    create: true
-    claim: sip-log-pvc
-    storageClass: ""
-    volumeName:
-
+    create: true                                    # create defines whether a PVC needs to be created with the chart.
+    claim: sip-log-pvc                              # Name of PVC
+    volumeName:                                     # To bind this PVC to specified Persistent Volume.In case of Openshift, this is required only for NFS mounting and not needed for OFS.
+    claimSize: 10Gi                                 # This field sets the storage size requested by PVC
+    storageClass: csi-standard-rwx                  # This field sets the storage class requested by PVC
+    mountPath: /opt/genesys/logs/volume             # Volume mount path for PV
+       
   pvcJsonLog:
-    create: true
-    claim: sip-json-log-pvc
-    storageClass: ""
-    volumeName:
+    create: true                                    # create defines whether a PVC needs to be created with the chart.
+    claim: sip-json-log-pvc                         # Name of PVC
+    volumeName:                                     # To bind this PVC to specified Persistent Volume.In case of Openshift, this is required only for NFS mounting and not needed for OFS.
+    claimSize: 10Gi                                 # This field sets the storage size requested by PVC
+    storageClass: csi-standard-rwx                  # This field sets the storage class requested by PVC
+    mountPath: /opt/genesys/logs/sip_node/JSON      # Volume mount path for PV
 
   log:
-    mountPath:
-
-  jsonLog:
-    mountPath:
+    mountPath:                                      # Mount path for hostpath (/mnt/volume)
 
 # Enable HPA and set the target CPU and memory for scale up and down
 hpa:
