@@ -16,7 +16,7 @@ loggingSidecar:
     repository: fluent-bit
 
 sipsLoggingSidecar:
-  enabled: true
+  enabled: false                  #enable will not write to sip-log-pvc 
   image:
     registry: fluent
     repository: fluent-bit
