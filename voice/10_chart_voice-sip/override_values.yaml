@@ -43,7 +43,7 @@ volumes:
     claim: sip-log-pvc                              # Name of PVC
     volumeName:                                     # To bind this PVC to specified Persistent Volume.In case of Openshift, this is required only for NFS mounting and not needed for OFS.
     claimSize: 10Gi                                 # This field sets the storage size requested by PVC
-    storageClass: csi-standard-rwx                  # This field sets the storage class requested by PVC
+    storageClass: standard-rwx                      # This field sets the storage class requested by PVC
     mountPath: /opt/genesys/logs/volume             # Volume mount path for PV
        
   pvcJsonLog:
@@ -51,7 +51,7 @@ volumes:
     claim: sip-json-log-pvc                         # Name of PVC
     volumeName:                                     # To bind this PVC to specified Persistent Volume.In case of Openshift, this is required only for NFS mounting and not needed for OFS.
     claimSize: 10Gi                                 # This field sets the storage size requested by PVC
-    storageClass: csi-standard-rwx                  # This field sets the storage class requested by PVC
+    storageClass: standard-rwx                      # This field sets the storage class requested by PVC
     mountPath: /opt/genesys/logs/sip_node/JSON      # Volume mount path for PV
 
   log:
