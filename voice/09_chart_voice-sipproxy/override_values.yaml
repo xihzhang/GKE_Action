@@ -26,6 +26,11 @@ secrets:
     general:
       mode: k8s
       enabled: true
+
+consul:
+      secure: false                      # Use TLS for connecting to Consul
+      port: 8500
+
 # Enable HPA and set the target CPU and memory for scale up and down
 hpa:
   enabled: false
