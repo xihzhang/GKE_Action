@@ -28,21 +28,7 @@ secrets:
       enabled: true
 
 context:
-  create: true                           # Create a config map to store settings which can be used to pass in non-sensitive config data as Environment variables
-  configname: "voice-sipproxy-configmap" # Configmap name
   envs:
-    # Application Configuration
-    sipPort: 5080                        # Service port Number. This value should not be overridden with Genesys consent.
-    httpPort: 11400                      # HTTP port number . This value should not be overridden.
-    loggingLevel: "DEBUG"                # Service Logging level
-
-    nodeOptions:
-      maxOldSpaceSize: 8192             # Max heap size(in megabytes) that will be allocated to node running in the service container.By default this value is 1.4GB
-
-    redis:
-      port: 10000                  # Redis Cluster port
-      isCluster: true              # Service will connect to Redis cluster or Redis standalone. By default we use Redis cluster. This value should not be overridden.
-
     consul:
       secure: false                     # Use TLS for connecting to Consul
       port: 8500                        # Consul listening Port
