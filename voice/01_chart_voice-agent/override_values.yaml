@@ -23,10 +23,6 @@ secrets:
       secret:
         secretName: consul-voice-token
 
-consul:
-      secure: false                      # Use TLS for connecting to Consul
-      port: 8500
-
 # Enable HPA and set the target CPU and memory for scale up and down
 hpa:
   targetCPUPercent: 60
