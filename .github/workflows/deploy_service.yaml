@@ -86,7 +86,7 @@ on:
         default: "default"
       helmrepo:
         description: helm repo name in HELM_REGISTRY
-        required: true
+        required: false
         default: helm-multicloud
       command:
         description: command install|validate|uninstall
