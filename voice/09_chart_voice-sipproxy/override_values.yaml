@@ -27,10 +27,32 @@ secrets:
       mode: k8s
       enabled: true
 
-consul:
-      secure: false                      # Use TLS for connecting to Consul
-      port: 8500
+context:
+  create: true                           # Create a config map to store settings which can be used to pass in non-sensitive config data as Environment variables
+  configname: "voice-sipproxy-configmap" # Configmap name
+  envs:
+    # Application Configuration
+    sipPort: 5080                        # Service port Number. This value should not be overridden with Genesys consent.
+    httpPort: 11400                      # HTTP port number . This value should not be overridden.
+    loggingLevel: "DEBUG"                # Service Logging level
 
+    nodeOptions:
+      maxOldSpaceSize: 8192             # Max heap size(in megabytes) that will be allocated to node running in the service container.By default this value is 1.4GB
+
+    redis:
+      port: 10000                  # Redis Cluster port
+      isCluster: true              # Service will connect to Redis cluster or Redis standalone. By default we use Redis cluster. This value should not be overridden.
+
+    consul:
+      secure: false                     # Use TLS for connecting to Consul
+      port: 8500                        # Consul listening Port
+      serviceCheck:
+        enabled: true                   # Enable/disable consul health check Probe functionality. This value should not be overridden.
+        checkInterval: "10s"            # Specifies how often consul sends Health Check API in seconds to service. This value should not be overridden.
+        checkTimeout: "1s"              # Specifies the Health check API Timeout in seconds. This value should not be overridden.
+        deregisterTimeout: "1m"         # Set consul health check reregistration timeout. This value should not be overridden.
+        
+        
 # Enable HPA and set the target CPU and memory for scale up and down
 hpa:
   enabled: false
