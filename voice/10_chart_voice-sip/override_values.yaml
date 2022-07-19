@@ -72,3 +72,8 @@ prometheus:
 prometheus:
     podMonitor:
       enabled: false
+      
+      
+consul:
+      secure: false                      # Use TLS for connecting to Consul
+      port: 8500
