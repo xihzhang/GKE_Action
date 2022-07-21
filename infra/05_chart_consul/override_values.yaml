@@ -7,7 +7,7 @@
 global:
   name: consul
   tls:
-    enabled: true
+    enabled: false
     httpsOnly: false
     caCert:
       secretName: consul-ca-cert
