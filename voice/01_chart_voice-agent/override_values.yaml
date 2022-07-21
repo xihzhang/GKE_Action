@@ -27,12 +27,4 @@ secrets:
 hpa:
   targetCPUPercent: 60
   targetMemoryPercent: 60
-  enabled: true  
-
-prometheus:
-    operator:
-      enabled: false
-
-prometheus:
-    podMonitor:
-      enabled: false
+  enabled: true
