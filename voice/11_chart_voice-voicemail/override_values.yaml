@@ -165,17 +165,17 @@ securityContext:
   runAsUser: 500
   runAsGroup: 500
 
-#prometheus:
+prometheus:
   # Enable for Prometheus Annotation
-  #metricServer:
-    #enabled: false
-    #path: /metrics
+  metricServer:
+    enabled: false
+    path: /metrics
 
   # Enable for Prometheus operator
-  #podMonitor:
-    #enabled: false
-    #path: /metrics
-    #interval: 30s
-    #scrapeTimeout:
+  podMonitor:
+    enabled: false
+    path: /metrics
+    interval: 30s
+    scrapeTimeout:
 
 podSecurityContext: {}
