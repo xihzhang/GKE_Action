@@ -41,7 +41,7 @@ function create_endpoint {
 ###############################################################################
 export REDIS_PASSWORD=$( get_secret REDIS_PASSWORD )
 export REDIS_IP=$( get_secret REDIS_IP )
-export REDIS_PORT=$( get_secret REDIS_PORT )
+export REDIS_PORT=6379
 ###############################################################################
 #             CONSUL credentials
 ###############################################################################
