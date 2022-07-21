@@ -26,28 +26,6 @@ secrets:
     general:
       mode: k8s
       enabled: true
-
-#context:
-  #envs:
-    #consul:
-      #secure: false                     # Use TLS for connecting to Consul
-      #port: 8500                        # Consul listening Port
-      #serviceCheck:
-        #enabled: true                   # Enable/disable consul health check Probe functionality. This value should not be overridden.
-        #checkInterval: "10s"            # Specifies how often consul sends Health Check API in seconds to service. This value should not be overridden.
-        #checkTimeout: "1s"              # Specifies the Health check API Timeout in seconds. This value should not be overridden.
-        #deregisterTimeout: "1m"         # Set consul health check reregistration timeout. This value should not be overridden.
-        
-        
 # Enable HPA and set the target CPU and memory for scale up and down
 hpa:
   enabled: false
-  
-
-prometheus:
-    operator:
-      enabled: false
-
-prometheus:
-    podMonitor:
-      enabled: false
